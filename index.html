@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html>
+    <head prefix="og: http://ogp.me/ns#">
+
+        <meta name="google-site-verification" content="QEyIHPbSKR2Z9ZNkfVHGdGv5EE7tTM7FE0Wt8tmcH50" />
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width">
+     
+        <title>LBRY - Content Freedom</title>
+        
+        <link href="/css/intro.css" rel="stylesheet" type="text/css" />
+        <meta name="description" content="Meet LBRY, a content sharing and publishing platform that is decentralized and owned by its users.">
+        <meta name="msapplication-TileColor" content="#155B4A">
+        <meta name="msapplication-TileImage" content="/img/fav/mstile-144x144.png">
+        <meta name="theme-color" content="#155B4A">
+        
+    </head>
+    <body>
+        <div class="sl-container">
+            <div class="header">
+                <img src="img/LBRYlogo.png" alt="LBRYlogo" class="lgleft">
+                <img src="img/LBRYlogo.png" alt="LBRYlogo" class="lgright">
+                <h1>How LBRY works</h1>
+            </div>
+            <div class="slideshow-container">
+                
+                <div class="mySlides fade">
+                    <div class="numbertext">1 / 1</div>
+                    <img src="img/lbry-intro-page-01-slide-01.png" style="width:100%">
+                </div>
+
+                <div class="mySlides fade">
+                    <div class="numbertext">1 / 2</div>
+                    <img src="img/lbry-intro-page-01-slide-02.png" style="width:100%">
+                </div>
+
+                <div class="mySlides fade">
+                    <div class="numbertext">1 / 3</div>
+                    <img src="img/lbry-intro-page-01-slide-03.png" style="width:100%">
+                </div>
+                
+                <div class="mySlides fade">
+                    <div class="numbertext">1 / 4</div>
+                    <img src="img/lbry-intro-page-01-slide-04-illegal-content.png" style="width:100%">
+                </div>
+                
+                <div class="mySlides fade">
+                    <div class="numbertext">2 / 1</div>
+                    <img src="img/lbry-intro-page-02-slide-01-1.png" style="width:100%">
+                </div>
+                
+                <div class="mySlides fade">
+                    <div class="numbertext">2 / 2</div>
+                    <img src="img/lbry-intro-page-02-slide-02.png" style="width:100%">
+                </div>
+                
+                <div class="mySlides fade">
+                    <div class="numbertext">2 / 3</div>
+                    <img src="img/lbry-intro-page-02-slide-03.png" style="width:100%">
+                </div>
+                
+                <div class="mySlides fade">
+                    <div class="numbertext">2 / 4</div>
+                    <img src="img/lbry-intro-page-02-slide-04.png" style="width:100%">
+                </div>
+                
+                <div class="mySlides fade">
+                    <div class="numbertext">3 / 1</div>
+                    <img src="img/lbry-intro-page-03-slide-01.png" style="width:100%">
+                </div>
+                
+                <div class="mySlides fade">
+                    <div class="numbertext">3 / 2</div>
+                    <img src="img/lbry-intro-page-03-slide-02.png" style="width:100%">
+                </div>
+                
+                <div class="mySlides fade">
+                    <div class="numbertext">3 / 3</div>
+                    <img src="img/lbry-intro-page-03-slide-03.png" style="width:100%">
+                </div>
+
+                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                <a class="next" onclick="plusSlides(1)">&#10095;</a>
+            </div>
+            <br>
+
+            <!-- progressbar -->
+            <form id="msform">
+                <ul>
+                    <li id="bar"></li>
+                    <li id="bar2"></li>
+                </ul>
+                <ul id="progressbar">
+                    <li id="dot1" class="active" onclick="currentSlide(1)">LBRY protocol and app</li>
+                    <li id="dot2" onclick="currentSlide(5)">The publisher</li>
+                    <li id="dot3" onclick="currentSlide(9)">The user</li>
+                    <li id="dot4" onclick="currentSlide(11)">Learn more</li>
+                </ul> 
+            </form>
+        </div>
+        
+        <script>
+    
+            var slideIndex = 1;
+            showSlides(slideIndex);
+
+            function plusSlides(n) {
+                showSlides(slideIndex += n);
+            }
+
+            function currentSlide(n) {
+                showSlides(slideIndex = n);
+            }
+
+            function showSlides(n) {
+                var i;
+                var slides = document.getElementsByClassName("mySlides");
+                
+                if (n > slides.length) {slideIndex = 1}
+                if (n < 1) {slideIndex = slides.length}
+
+                for (i = 0; i < slides.length; i++) {
+                    slides[i].style.display = "none";
+                }
+
+                slides[slideIndex-1].style.display = "block";
+                updateProgress();
+                }
+        
+            function updateProgress(){
+                switch(slideIndex) {
+                case 2:
+                    document.getElementById("bar2").style.width = "6%";
+                    break;
+                case 3:
+                    document.getElementById("bar2").style.width = "12%";
+                    break;
+                case 4:
+                    document.getElementById("bar2").style.width = "18%";
+                    break;
+                case 5:
+                    document.getElementById("bar2").style.width = "24%";
+                    break;
+                case 6:
+                    document.getElementById("bar2").style.width = "32%";
+                    break;
+                case 7:
+                    document.getElementById("bar2").style.width = "38%";
+                    break;
+                case 8:
+                    document.getElementById("bar2").style.width = "44%";
+                    break;
+                case 9:
+                    document.getElementById("bar2").style.width = "50%";
+                    break;
+                case 10:
+                    document.getElementById("bar2").style.width = "62%";
+                    break;
+                case 11:
+                    document.getElementById("bar2").style.width = "75%";
+                    break;
+                default:
+                    document.getElementById("bar2").style.width = "0%";
+                }
+        
+                if (slideIndex < 5){
+                    document.getElementById("dot2").className -= " active";
+                    document.getElementById("dot3").className -= " active";
+                    document.getElementById("dot4").className -= " active";
+                }else if (slideIndex < 9){
+                    document.getElementById("dot2").className += " active";
+                    document.getElementById("dot3").className -= " active";
+                    document.getElementById("dot4").className -= " active";            
+                }else if (slideIndex < 11){
+                    document.getElementById("dot2").className += " active";
+                    document.getElementById("dot3").className += " active";
+                    document.getElementById("dot4").className -= " active";        
+                }else{
+                    document.getElementById("dot2").className += " active";
+                    document.getElementById("dot3").className += " active";
+                    document.getElementById("dot4").className += " active";        
+                }
+        
+            }
+            
+        </script>
+    </body>
+</html>
